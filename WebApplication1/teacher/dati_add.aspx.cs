@@ -25,6 +25,7 @@ namespace WebApplication1.teacher
                 {
                     int test;
                     char s;
+                    int bb;
                     //InitData();
                 }
             }
