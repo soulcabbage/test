@@ -1,0 +1,118 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.master.cs" Inherits="WebApplication1.admin.admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        #MainContent
+        {
+            float: right;
+            width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <form id="Form1" runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    在线考试系统
+                </h1>
+            </div>
+            <div class="loginDisplay">
+                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        [ <a href="~/Account/log_in.aspx" id="HeadLoginStatus" runat="server">登录</a> ] [
+                        <a href="~/Account/Register.aspx" id="HeadRegisterStatus" runat="server">注册</a>
+                        ]
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        Welcome <span class="bold">
+                            <asp:LoginName ID="HeadLoginName" runat="server" />
+                        </span>! [
+                        <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out"
+                            LogoutPageUrl="~/" />
+                        ]
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </div>
+            <div class="clear hideSkiplink">
+                <%-- <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="主页"/>
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="关于"/>
+                    </Items>
+                </asp:Menu>--%>
+            </div>
+        </div>
+        <div class="main">
+            <div style="float: left; width: 18%">
+                <table style="font-size: 12px; font-family: Tahoma; border-collapse: collapse;" border="0"
+                    cellspacing="0" cellpadding="0">
+                    <tr valign="top">
+                        <td height="51">
+                            <img src="../../res/left_bg_01.jpg" height="50" style="width: 170px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td background="../../res/left_bg_02.jpg">
+                            <img src="../../res/ico_Xp10.gif" width="30" height="25" align="absMiddle">&nbsp;&nbsp;用户ID：
+                            <asp:Label ID="lbl_adminId" runat="server">未登录</asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td background="../../res/left_bg_02.jpg">
+                            <asp:TreeView ID="TreeView1" runat="server" Font-Size="11pt" Width="170px">
+                                <Nodes>
+                                    <asp:TreeNode ImageUrl="../../res/profile.png" Text="个人信息" Value="个人信息">
+                                        <asp:TreeNode ImageUrl="../../res/search.png" Text="信息查看" Value="信息查看" NavigateUrl="~/admin/admin_mes.aspx"
+                                            Target="frameMain"></asp:TreeNode>
+                                        <asp:TreeNode ImageUrl="../../res/modify.png" Text="信息修改" Value="信息修改" NavigateUrl="~/admin/admin_mes_mod.aspx"
+                                            Target="frameMain"></asp:TreeNode>
+                                    </asp:TreeNode>
+                                    <asp:TreeNode ImageUrl="../../res/user1.png" Text="用户信息" Value="用户信息">
+                                        <asp:TreeNode ImageUrl="../../res/add.png" Text="用户添加" Value="用户添加" NavigateUrl="~/admin/user_add.aspx"
+                                            Target="frameMain"></asp:TreeNode>
+                                        <asp:TreeNode ImageUrl="../../res/modify.png" Text="用户管理" Value="用户管理" NavigateUrl="~/admin/user_mod.aspx"
+                                            Target="frameMain"></asp:TreeNode>
+                                    </asp:TreeNode>
+                                    <asp:TreeNode ImageUrl="../../res/spellcheck.png" Text="课程管理" Value="科目">
+                                        <asp:TreeNode ImageUrl="../../res/add.png" Text="科目添加" Value="科目添加" NavigateUrl="~/admin/course_add.aspx"
+                                            Target="frameMain"></asp:TreeNode>
+                                        <asp:TreeNode ImageUrl="../../res/modify.png" Text="科目管理" Value="科目管理" NavigateUrl="~/admin/course_mod.aspx"
+                                            Target="frameMain"></asp:TreeNode>
+                                    </asp:TreeNode>
+                                    <asp:TreeNode ImageUrl="../../res/exit.png" Text="安全退出">
+                                        <asp:TreeNode ImageUrl="../../res/search.png" Text="退出" Value="退出" NavigateUrl="~/Account/log_in.aspx">
+                                        </asp:TreeNode>
+                                    </asp:TreeNode>
+                                </Nodes>
+                            </asp:TreeView>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="51">
+                            <img src="../../res/left_bg_03.jpg" height="50" style="width: 170px">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div style="float: right; width: 78%">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        上海第二工业大学14（软件工程） 汪锡钟
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,139 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="teacher.master.cs" Inherits="WebApplication1.teacher.teacher" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        #MainContent
+        {
+            float: right;
+            width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <form id="Form1" runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    在线考试系统
+                </h1>
+            </div>
+            <div class="loginDisplay">
+                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        [ <a href="~/Account/log_in.aspx" id="HeadLoginStatus" runat="server">登录</a> ] [
+                        <a href="~/Account/register.aspx" id="HeadRegisterStatus" runat="server">注册</a>
+                        ]
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        Welcome <span class="bold">
+                            <asp:LoginName ID="HeadLoginName" runat="server" />
+                        </span>! [
+                        <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out"
+                            LogoutPageUrl="~/" />
+                        ]
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </div>
+            <div class="clear hideSkiplink">
+                <%--<asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false"
+                        IncludeStyleBlock="false" Orientation="Horizontal">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/Default.aspx" Text="主页" />
+                            <asp:MenuItem NavigateUrl="~/About.aspx" Text="关于" />
+                        </Items>
+                    </asp:Menu>--%>
+            </div>
+        </div>
+        <div class="main">
+            <div style="float: left; width: 18%">
+                <table style="font-size: 12px; font-family: Tahoma; border-collapse: collapse; float: left;
+                    width: 170px" border="0" cellspacing="0" cellpadding="0">
+                    <tr valign="top">
+                        <td height="51">
+                            <img src="../res/left_bg_01.jpg" height="50" style="width: 170px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td background="../../res/left_bg_02.jpg">
+                            <img src="../../res/ico_Xp10.gif" width="30" height="25" align="center">&nbsp;&nbsp;会员ID：
+                            <asp:Label ID="lbl_adminId" runat="server">未登录</asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td background="../../res/left_bg_02.jpg">
+                            <asp:TreeView ID="TreeView1" runat="server" Font-Size="11pt" Width="170px">
+                                <Nodes>
+                                    <asp:TreeNode ImageUrl="../../res/profile.png" Text="个人信息" Value="个人信息">
+                                        <asp:TreeNode ImageUrl="../../res/search.png" Text="信息查看" Value="信息查看" NavigateUrl="~/teacher/teacher_mes.aspx"
+                                            Target="frameMain"></asp:TreeNode>
+                                        <asp:TreeNode ImageUrl="../../res/modify.png" Text="信息修改" Value="信息修改" NavigateUrl="~/teacher/teacher_mes_mod.aspx"
+                                            Target="frameMain"></asp:TreeNode>
+                                    </asp:TreeNode>
+                                    <asp:TreeNode ImageUrl="../../res/plan.png" Text="考试安排" Value="考试安排">
+                                        <asp:TreeNode ImageUrl="../../res/add.png" Text="试卷定制" Value="试卷定制" NavigateUrl="~/teacher/testpaper_add.aspx"
+                                            Target="frameMain"></asp:TreeNode>
+                                        <asp:TreeNode ImageUrl="../../res/modify.png" Text="试卷管理" Value="试卷管理" NavigateUrl="~/teacher/testpaper_mod.aspx"
+                                            Target="frameMain"></asp:TreeNode>
+                                    </asp:TreeNode>
+                                    <asp:TreeNode ImageUrl="../../res/mark.png" Text="考生成绩" Value="考生成绩">
+                                        <asp:TreeNode ImageUrl="../../res/search.png" Text="考生成绩查询" Value="考生成绩查询" NavigateUrl="~/teacher/stu_grade_query.aspx"
+                                            Target="frameMain"></asp:TreeNode>
+                                        <%--<asp:TreeNode ImageUrl="../../res/print.png" Text="考生信息查询" Value="考生信息查询" NavigateUrl="~/teacher/stu_message_query.aspx"
+                                            Target="frameMain"></asp:TreeNode>--%>
+                                    </asp:TreeNode>
+                                    <asp:TreeNode ImageUrl="../../res/spellcheck.png" Text="试题集库" Value="试题集库">
+                                        <asp:TreeNode ImageUrl="../../res/add.png" Text="单选题录入" Value="单选题录入" NavigateUrl="~/teacher/singleselect_add.aspx">
+                                        </asp:TreeNode>
+                                        <asp:TreeNode ImageUrl="../../res/modify.png" Text="单选题维护" Value="单选题维护" NavigateUrl="~/teacher/singleselect_mod.aspx">
+                                        </asp:TreeNode>
+                                        <asp:TreeNode ImageUrl="../../res/add.png" Text="多选题录入" Value="多选题录入" NavigateUrl="~/teacher/multiselect_add.aspx">
+                                        </asp:TreeNode>
+                                        <asp:TreeNode ImageUrl="../../res/modify.png" Text="多选题维护" Value="多选题维护" NavigateUrl="~/teacher/multiselect_mod.aspx">
+                                        </asp:TreeNode>
+                                        <asp:TreeNode ImageUrl="../../res/add.png" Text="填空题录入" Value="填空题录入" NavigateUrl="~/teacher/fillblank_add.aspx">
+                                        </asp:TreeNode>
+                                        <asp:TreeNode ImageUrl="../../res/modify.png" Text="填空题维护" Value="填空题维护" NavigateUrl="~/teacher/fillblank_mod.aspx">
+                                        </asp:TreeNode>
+                                        <asp:TreeNode ImageUrl="../../res/add.png" Text="判断题录入" Value="判断题录入" NavigateUrl="~/teacher/judge_add.aspx">
+                                        </asp:TreeNode>
+                                        <asp:TreeNode ImageUrl="../../res/modify.png" Text="判断题维护" Value="判断题维护" NavigateUrl="~/teacher/judge_mod.aspx">
+                                        </asp:TreeNode>
+                                        <asp:TreeNode ImageUrl="../../res/add.png" NavigateUrl="~/teacher/dati_add.aspx" Text="大题录入" Value="大题录入">
+                                        </asp:TreeNode>
+                                    </asp:TreeNode>
+                                    <asp:TreeNode ImageUrl="../../res/exit.png" Text="安全退出">
+                                        <asp:TreeNode ImageUrl="../../res/search.png" Text="退出" Value="退出" NavigateUrl="~/Account/Log_in.aspx">
+                                        </asp:TreeNode>
+                                    </asp:TreeNode>
+                                </Nodes>
+                            </asp:TreeView>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="51">
+                            <img src="../../res/left_bg_03.jpg" height="50" style="width: 170px">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div style="float: right; width: 78%">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        上海第二工业大学14（软件工程） 汪锡钟
+    </div>
+    </form>
+</body>
+</html>

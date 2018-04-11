@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+此文件由 Web 项目的发布/打包过程使用。可以通过编辑此 MSBuild 文件
+自定义此过程的行为。为了解与此相关的更多内容，请访问 https://go.microsoft.com/fwlink/?LinkID=208121。 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\Ss</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Account/About.aspx">
+      <publishTime>05/07/2013 20:00:24</publishTime>
+    </File>
+    <File Include="Account/ChangePassword.aspx">
+      <publishTime>05/07/2013 19:57:50</publishTime>
+    </File>
+    <File Include="Account/ChangePasswordSuccess.aspx">
+      <publishTime>05/07/2013 19:56:54</publishTime>
+    </File>
+    <File Include="Account/Default.aspx">
+      <publishTime>05/07/2013 20:00:40</publishTime>
+    </File>
+    <File Include="Account/Log_in.aspx">
+      <publishTime>03/29/2018 17:31:34</publishTime>
+    </File>
+    <File Include="Account/register.aspx">
+      <publishTime>05/12/2013 16:22:08</publishTime>
+    </File>
+    <File Include="Account/Site.Master">
+      <publishTime>03/27/2018 09:26:55</publishTime>
+    </File>
+    <File Include="admin/admin.Master">
+      <publishTime>03/27/2018 09:26:55</publishTime>
+    </File>
+    <File Include="admin/admin_mes.aspx">
+      <publishTime>03/27/2018 09:11:30</publishTime>
+    </File>
+    <File Include="admin/admin_mes_mod.aspx">
+      <publishTime>05/12/2013 16:30:50</publishTime>
+    </File>
+    <File Include="admin/course_add.aspx">
+      <publishTime>05/01/2013 00:21:34</publishTime>
+    </File>
+    <File Include="admin/course_mod.aspx">
+      <publishTime>05/12/2013 21:16:44</publishTime>
+    </File>
+    <File Include="admin/testpaper_mod.aspx">
+      <publishTime>05/12/2013 22:12:18</publishTime>
+    </File>
+    <File Include="admin/user_add.aspx">
+      <publishTime>05/20/2013 13:46:14</publishTime>
+    </File>
+    <File Include="admin/user_mod.aspx">
+      <publishTime>05/29/2013 13:15:42</publishTime>
+    </File>
+    <File Include="App_Themes/Skin1/Skin1.skin">
+      <publishTime>04/04/2018 08:52:55</publishTime>
+    </File>
+    <File Include="bin/WebApplication1.dll">
+      <publishTime>04/04/2018 09:28:32</publishTime>
+    </File>
+    <File Include="bin/WebApplication1.pdb">
+      <publishTime>04/04/2018 09:28:32</publishTime>
+    </File>
+    <File Include="DatePicker/calendar.js">
+      <publishTime>04/04/2018 08:50:58</publishTime>
+    </File>
+    <File Include="DatePicker/lang/en.js">
+      <publishTime>04/04/2018 08:52:07</publishTime>
+    </File>
+    <File Include="DatePicker/lang/zh-cn.js">
+      <publishTime>04/04/2018 08:52:24</publishTime>
+    </File>
+    <File Include="DatePicker/lang/zh-tw.js">
+      <publishTime>04/04/2018 08:52:32</publishTime>
+    </File>
+    <File Include="DatePicker/skin/datePicker.gif">
+      <publishTime>04/30/2013 01:14:32</publishTime>
+    </File>
+    <File Include="DatePicker/skin/default/datepicker.css">
+      <publishTime>04/04/2018 08:51:49</publishTime>
+    </File>
+    <File Include="DatePicker/skin/default/img.gif">
+      <publishTime>04/30/2013 01:14:32</publishTime>
+    </File>
+    <File Include="DatePicker/skin/WdatePicker.css">
+      <publishTime>04/30/2013 01:14:32</publishTime>
+    </File>
+    <File Include="DatePicker/skin/whyGreen/bg.jpg">
+      <publishTime>04/30/2013 01:14:32</publishTime>
+    </File>
+    <File Include="DatePicker/skin/whyGreen/datepicker.css">
+      <publishTime>04/04/2018 08:51:36</publishTime>
+    </File>
+    <File Include="DatePicker/skin/whyGreen/img.gif">
+      <publishTime>04/30/2013 01:14:32</publishTime>
+    </File>
+    <File Include="DatePicker/WdatePicker.js">
+      <publishTime>04/04/2018 08:51:09</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>04/04/2018 08:47:45</publishTime>
+    </File>
+    <File Include="res/add.png">
+      <publishTime>04/04/2018 08:49:54</publishTime>
+    </File>
+    <File Include="res/exit.png">
+      <publishTime>04/16/2013 15:53:18</publishTime>
+    </File>
+    <File Include="res/head0.jpg">
+      <publishTime>04/16/2013 17:57:06</publishTime>
+    </File>
+    <File Include="res/ico_Xp10.gif">
+      <publishTime>04/16/2013 15:31:08</publishTime>
+    </File>
+    <File Include="res/left_bg_01.jpg">
+      <publishTime>04/16/2013 15:31:06</publishTime>
+    </File>
+    <File Include="res/left_bg_02.jpg">
+      <publishTime>04/16/2013 16:42:18</publishTime>
+    </File>
+    <File Include="res/left_bg_03.jpg">
+      <publishTime>04/18/2013 13:54:34</publishTime>
+    </File>
+    <File Include="res/login.jpg">
+      <publishTime>05/07/2013 21:39:00</publishTime>
+    </File>
+    <File Include="res/mark.png">
+      <publishTime>04/16/2013 16:57:46</publishTime>
+    </File>
+    <File Include="res/modify.png">
+      <publishTime>04/16/2013 15:53:18</publishTime>
+    </File>
+    <File Include="res/plan.png">
+      <publishTime>04/16/2013 16:08:24</publishTime>
+    </File>
+    <File Include="res/print.png">
+      <publishTime>04/16/2013 15:56:30</publishTime>
+    </File>
+    <File Include="res/profile.png">
+      <publishTime>04/16/2013 15:53:18</publishTime>
+    </File>
+    <File Include="res/search.png">
+      <publishTime>04/16/2013 15:53:18</publishTime>
+    </File>
+    <File Include="res/spellcheck.png">
+      <publishTime>04/16/2013 16:08:24</publishTime>
+    </File>
+    <File Include="res/user1.png">
+      <publishTime>05/12/2013 14:48:54</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.4.1-vsdoc.js">
+      <publishTime>04/04/2018 08:49:24</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.4.1.js">
+      <publishTime>04/04/2018 08:48:56</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.4.1.min.js">
+      <publishTime>04/04/2018 08:49:11</publishTime>
+    </File>
+    <File Include="student/answer.aspx">
+      <publishTime>05/07/2013 19:41:50</publishTime>
+    </File>
+    <File Include="student/exam_a.aspx">
+      <publishTime>05/12/2013 00:22:36</publishTime>
+    </File>
+    <File Include="student/have_test.aspx">
+      <publishTime>05/12/2013 23:16:42</publishTime>
+    </File>
+    <File Include="student/not_test.aspx">
+      <publishTime>05/30/2013 15:02:14</publishTime>
+    </File>
+    <File Include="student/score_query.aspx">
+      <publishTime>06/09/2013 17:41:44</publishTime>
+    </File>
+    <File Include="student/student.Master">
+      <publishTime>03/27/2018 09:26:55</publishTime>
+    </File>
+    <File Include="student/student_mes.aspx">
+      <publishTime>01/23/2018 09:05:58</publishTime>
+    </File>
+    <File Include="student/student_mes_mod.aspx">
+      <publishTime>01/23/2018 09:05:46</publishTime>
+    </File>
+    <File Include="Styles/Site.css">
+      <publishTime>04/04/2018 08:48:27</publishTime>
+    </File>
+    <File Include="teacher/dati_add.aspx">
+      <publishTime>03/29/2018 16:27:04</publishTime>
+    </File>
+    <File Include="teacher/fillblank_add.aspx">
+      <publishTime>03/29/2018 10:03:10</publishTime>
+    </File>
+    <File Include="teacher/fillblank_mod.aspx">
+      <publishTime>05/29/2013 20:24:46</publishTime>
+    </File>
+    <File Include="teacher/judge_add.aspx">
+      <publishTime>03/27/2018 09:56:05</publishTime>
+    </File>
+    <File Include="teacher/judge_mod.aspx">
+      <publishTime>05/29/2013 20:26:20</publishTime>
+    </File>
+    <File Include="teacher/multiselect_add.aspx">
+      <publishTime>03/27/2018 09:56:55</publishTime>
+    </File>
+    <File Include="teacher/multiselect_mod.aspx">
+      <publishTime>05/29/2013 20:23:46</publishTime>
+    </File>
+    <File Include="teacher/singleselect_add.aspx">
+      <publishTime>03/27/2018 10:08:02</publishTime>
+    </File>
+    <File Include="teacher/singleselect_mod.aspx">
+      <publishTime>03/27/2018 10:08:04</publishTime>
+    </File>
+    <File Include="teacher/stu_grade_query.aspx">
+      <publishTime>05/12/2013 21:09:36</publishTime>
+    </File>
+    <File Include="teacher/stu_message_query.aspx">
+      <publishTime>05/12/2013 12:08:46</publishTime>
+    </File>
+    <File Include="teacher/teacher.Master">
+      <publishTime>03/29/2018 09:58:08</publishTime>
+    </File>
+    <File Include="teacher/teacher_mes.aspx">
+      <publishTime>05/12/2013 13:05:28</publishTime>
+    </File>
+    <File Include="teacher/teacher_mes_mod.aspx">
+      <publishTime>05/12/2013 16:21:18</publishTime>
+    </File>
+    <File Include="teacher/testpaper_add.aspx">
+      <publishTime>05/11/2013 19:06:22</publishTime>
+    </File>
+    <File Include="teacher/testpaper_mod.aspx">
+      <publishTime>05/12/2013 21:15:46</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/04/2018 09:25:12</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
