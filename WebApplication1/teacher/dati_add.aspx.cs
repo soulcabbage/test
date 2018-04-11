@@ -23,6 +23,8 @@ namespace WebApplication1.teacher
                 InitDDLData();              //初始化考试科目下拉列表框          
                 if (Request["ID"] != null)  //如果是修改题目，初始化数据
                 {
+                    int test;
+                    char s;
                     //InitData();
                 }
             }
