@@ -233,17 +233,17 @@
     <Compile Include="admin\user_mod.aspx.designer.cs">
       <DependentUpon>user_mod.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_Code\App_Data\BusinessLogicLayer\Course.cs" />
-    <Compile Include="App_Code\App_Data\BusinessLogicLayer\FillBlankProblem.cs" />
-    <Compile Include="App_Code\App_Data\BusinessLogicLayer\JudgeProblem.cs" />
-    <Compile Include="App_Code\App_Data\BusinessLogicLayer\MultiProblem.cs" />
-    <Compile Include="App_Code\App_Data\BusinessLogicLayer\Paper.cs" />
-    <Compile Include="App_Code\App_Data\BusinessLogicLayer\Scores.cs" />
-    <Compile Include="App_Code\App_Data\BusinessLogicLayer\SingleProblem.cs" />
-    <Compile Include="App_Code\App_Data\BusinessLogicLayer\Users.cs" />
-    <Compile Include="App_Code\App_Data\DataAccessHelper\GetSafeData.cs" />
-    <Compile Include="App_Code\App_Data\DataAccessHelper\SQLString.cs" />
-    <Compile Include="App_Code\App_Data\DataAccessLayer\DataBase.cs" />
+    <Compile Include="App_Data\BusinessLogicLayer\Course.cs" />
+    <Compile Include="App_Data\BusinessLogicLayer\FillBlankProblem.cs" />
+    <Compile Include="App_Data\BusinessLogicLayer\JudgeProblem.cs" />
+    <Compile Include="App_Data\BusinessLogicLayer\MultiProblem.cs" />
+    <Compile Include="App_Data\BusinessLogicLayer\Paper.cs" />
+    <Compile Include="App_Data\BusinessLogicLayer\Scores.cs" />
+    <Compile Include="App_Data\BusinessLogicLayer\SingleProblem.cs" />
+    <Compile Include="App_Data\BusinessLogicLayer\Users.cs" />
+    <Compile Include="App_Data\DataAccessHelper\GetSafeData.cs" />
+    <Compile Include="App_Data\DataAccessHelper\SQLString.cs" />
+    <Compile Include="App_Data\DataAccessLayer\DataBase.cs" />
     <Compile Include="Account\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -251,7 +251,7 @@
     <Compile Include="Account\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_Code\App_Data\BusinessLogicLayer\Dati.cs" />
+    <Compile Include="App_Data\BusinessLogicLayer\Dati.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -434,6 +434,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="admin\Temp\" />
+    <Folder Include="App_Code\" />
     <Folder Include="teacher\DatiImg\" />
     <Folder Include="teacher\Temp\" />
   </ItemGroup>
