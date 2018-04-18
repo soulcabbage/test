@@ -1,6 +1,6 @@
 using System;
 using System.Data;
-//该源码下载自www.cnzz.cn
+
 
 namespace MyOnLineExam.DataAccessHelper
 {

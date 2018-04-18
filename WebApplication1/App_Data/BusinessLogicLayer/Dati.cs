@@ -6,6 +6,7 @@ using System.IO;
 using System.Data.SqlClient;
 using MyOnLineExam.DataAccessLayer;
 using System.Data;
+using MyOnLineExam.DataAccessHelper;
 
 namespace WebApplication1
 {
@@ -122,7 +123,49 @@ namespace WebApplication1
                 return true;
             else return false;
         }
+        //根据题目ID 初始化题目
+        //输入：
+        //      TID - 题目编号；
+        //输出：
+        //      题目存在：返回True；
+        //      题目不在：返回False；
+        public bool LoadData(int TID)
+        {
+            SqlParameter[] Params = new SqlParameter[1];
+            DataBase DB = new DataBase();
 
+            Params[0] = DB.MakeInParam("@ID", SqlDbType.Int, 4, TID);                  //用户编号            
+
+            DataSet ds = DB.GetDataSet("Proc_DatiDetail", Params);
+            ds.CaseSensitive = false;
+            DataRow DR;
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                DR = ds.Tables[0].Rows[0];
+                this._CourseID = GetSafeData.ValidateDataRow_N(DR, "CourseID");//科目编号 
+                this._ImgFile = GetSafeData.ValidateDataRow_S(DR, "Img"); //图片url
+                this._Title = GetSafeData.ValidateDataRow_S(DR, "Title");//大题信息
+                this._nandu = GetSafeData.ValidateDataRow_N(DR, "Nandu");//难度
+                this._zhang = GetSafeData.ValidateDataRow_N(DR, "Zhang");//章
+                this._jie = GetSafeData.ValidateDataRow_N(DR, "Jie");//节
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool UpdateByProc(int TID)
+        {
+            SqlParameter[] Params = new SqlParameter[5];
+
+            DataBase DB = new DataBase();
+
+            Params[0] = DB.MakeInParam("@ID", SqlDbType.Int, 4, TID);                           //题目编号
+            Params[1] = DB.MakeInParam("@CourseID", SqlDbType.Int, 4, CourseID);                //科目编号
+            Params[2] =DB.MakeInParam("@")
+
+        }
     }
     #endregion
 }

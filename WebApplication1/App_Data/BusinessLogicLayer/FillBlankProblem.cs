@@ -17,6 +17,9 @@ namespace MyOnLineExam.BusinessLogicLayer
         private string _FrontTitle;                                    //题目前部分    
         private string _BackTitle;                                     //题目后部分
         private string _Answer;                                        //答案
+        private int _zhang;
+        private int _jie;
+        private int _nandu;
 
         #endregion 私有成员
 
@@ -77,17 +80,50 @@ namespace MyOnLineExam.BusinessLogicLayer
                 return this._Answer;
             }
         }
-        
+        public int Zhang
+        {
+            set
+            {
+                this._zhang = value;
+            }
+            get
+            {
+                return this._zhang;
+            }
+        }
+        public int jie
+        {
+            set
+            {
+                this._jie = value;
+            }
+            get
+            {
+                return this._jie;
+            }
+        }
+        public int Nandu
+        {
+            set
+            {
+                this._nandu = value;
+            }
+            get
+            {
+                return this._nandu;
+            }
+        }
+
         #endregion 属性
 
-        #region 方法
+            #region 方法
 
-        //根据题目ID 初始化题目
-        //输入：
-        //      TID - 题目编号；
-        //输出：
-        //      题目存在：返回True；
-        //      题目不在：返回False；
+            //根据题目ID 初始化题目
+            //输入：
+            //      TID - 题目编号；
+            //输出：
+            //      题目存在：返回True；
+            //      题目不在：返回False；
         public bool LoadData(int TID)
         {
             SqlParameter[] Params = new SqlParameter[1];
@@ -105,6 +141,8 @@ namespace MyOnLineExam.BusinessLogicLayer
                 this._FrontTitle = GetSafeData.ValidateDataRow_S(DR, "FrontTitle");               //题目前部分
                 this._BackTitle = GetSafeData.ValidateDataRow_S(DR, "BackTitle");                 //题目后部分                
                 this._Answer = GetSafeData.ValidateDataRow_S(DR, "Answer");                       //答案
+                this._zhang = GetSafeData.ValidateDataRow_N(DR, "Zhang");//章
+                this._jie = GetSafeData.ValidateDataRow_N(DR, "Jie");//节
                 return true;
             }
             else

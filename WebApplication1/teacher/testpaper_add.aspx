@@ -33,14 +33,14 @@
         </tr>
         <tr>
             <td nowrap class="style2" align="center">
-                考试科目：
+                试题科目：
             </td>
             <td class="style2">
                 <asp:DropDownList ID="ddlCourse" runat="server" Font-Size="9pt" Width="120px">
                 </asp:DropDownList>
             </td>
             <td nowrap class="style2" align="center">
-                试卷名称：
+                练习名称：
             </td>
             <td class="style2">
                 <asp:TextBox ID="txtPaperName" runat="server" Width="120px"></asp:TextBox>
@@ -49,14 +49,14 @@
         <tr>
             <script language="javascript" type="text/javascript" src="../DatePicker/WdatePicker.js"></script>
             <td nowrap class="style2" align="center">
-                考试时间：
+                练习时间：
             </td>
             <td class="style2">
                 <input type="text" id="d241" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm'})"
                     class="Wdate" runat="server" width="120px" />
             </td>
             <td nowrap class="style2" align="center">
-                考试时长：
+                练习时长：
             </td>
             <td class="style2">
                 <asp:TextBox ID="longth" runat="server" Width="90px"></asp:TextBox>分钟

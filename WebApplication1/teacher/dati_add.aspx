@@ -78,7 +78,7 @@
         </tr>
 						
 		<tr align="center" height="55">
-			<td colSpan="2"><asp:Label ID="lblMessage" runat="server" ForeColor=red></asp:Label><br />
+			<td colSpan="2" style="margin-left: 40px"><asp:Label ID="lblMessage" runat="server" ForeColor=red></asp:Label><br />
 				<asp:Button ID="保存" runat="server" Text="保存" onclick="save_Click" />
                 &nbsp; &nbsp;   
                 <asp:Button ID="清空" runat="server" Text="清空" onclick="clear_Click" />

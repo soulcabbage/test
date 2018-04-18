@@ -434,7 +434,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="admin\Temp\" />
-    <Folder Include="App_Code\" />
     <Folder Include="teacher\DatiImg\" />
     <Folder Include="teacher\Temp\" />
   </ItemGroup>

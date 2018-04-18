@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 using MyOnLineExam.DataAccessLayer;
 using MyOnLineExam.DataAccessHelper;
 
-//该源码下载自www.cnzz.cn
+
 
 namespace MyOnLineExam.BusinessLogicLayer
 {
